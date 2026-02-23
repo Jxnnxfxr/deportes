@@ -8,12 +8,13 @@ public class EventoDeportivo implements Ganador{
     private String lugar;
     private ArrayList<Participante> participantes = new ArrayList<>();
 
-    //Constructor;
+    //Constructores;
     public EventoDeportivo(String nombre, LocalDate fecha, String lugar){
         this.nombre = nombre;
         this.fecha = fecha;
         this.lugar = lugar;
     }
+    
 
     //GETTERS AND SETTERS
     public String getNombre() {  return this.nombre;  }

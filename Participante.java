@@ -3,12 +3,14 @@ public class Participante {
     private String nombre;
     private String apellido;
     private int edad;
+    private double tiempo; //El tiempo registrado en segundos.
 
     //CONSTRUCTOR
-    public Participante(String nombre, String apellido, int edad){
+    public Participante(String nombre, String apellido, int edad, double tiempo){
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
+        this.tiempo = tiempo;
     }
     //GETTERS AND SETTERS
     public String getNombre() { return this.nombre; }
@@ -26,11 +28,16 @@ public class Participante {
         this.edad = edad;
     }
 
+    public double getTiempo() {  return this.tiempo;   }
+    public void setTiempo(double tiempo) {
+        this.tiempo = tiempo;
+    }
+
     //MÉTODOS DE LA CLASE
     @Override
     public String toString() {
         return 
-            "Nombre y apellido: " + getNombre() + " " + getApelido() +
+            "Nombre y apellido: " + getNombre() + " " + getApelido() + "\n" +
             "Edad: " + getEdad()
         ;
     }    
