@@ -17,20 +17,28 @@ public class Equipo {
     public String getNombre() {  return this.nombre;   }
     public void setNombre(String nombre) {
         this.nombre = nombre;
+        System.out.println("|Se ha modificado correctamente el nombre del equipo.");
     }
 
     public int getPuntos() {  return this.puntos;   }
     public void setPuntos(int puntos) {
         this.puntos = puntos;
+        System.out.println("|Se han modificado correctamente los puntos del equipo.");
     }
 
     //MÉTODOS DE LA CLASE
     public void addJugador(Participante participante) {
         jugadores.add(participante);
+        System.out.println("|Se ha añadido correctamente un nuevo participante.");
     }
 
-    public void eliminarJugador(Participante participante) {
-        jugadores.remove(participante);
+    public void eliminarJugador(Participante participante) throws Exception {
+        try {
+            jugadores.remove(participante);    
+        } catch (Exception e) {
+            //TODO: No está terminado
+            throw new Exception("Jugador no encontrado");
+        }
     }
 
     @Override

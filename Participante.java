@@ -5,7 +5,15 @@ public class Participante {
     private int edad;
     private double tiempo; //El tiempo registrado en segundos.
 
-    //CONSTRUCTOR
+    //CONSTRUCTORES
+    //Participantes por defecto
+    public Participante(String nombre, String apellido, int edad){
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+    }
+
+    //Participante de carreras porque registra el tiempo en segundos.
     public Participante(String nombre, String apellido, int edad, double tiempo){
         this.nombre = nombre;
         this.apellido = apellido;
